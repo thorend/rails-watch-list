@@ -1,0 +1,8 @@
+<h1>This is your Watchlist</h1>
+<ul class="divide-y divide-gray-100">
+  <% @lists.each do |list| %>
+    <li><%= link_to list.name, list_path(list)%> </li>
+  <% end %>
+</ul>
+
+<%= link_to "add a list", new_list_path  %>
